@@ -53,7 +53,8 @@
 // export default App;
 
 
-// cau 1
+// // cau 1
+
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Screen1 from './Screen1';

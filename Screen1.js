@@ -6,19 +6,7 @@ import { addJob, deleteJob, editJob } from './redux/actions';
 const Screen1 = ({ todos, addJob, deleteJob, editJob }) => {
     const [data, setData] = useState([]);
     const [txtJob, setJob] = useState('');
-    useEffect(() => {
-        fetchApi();
-    }, []);
-    const fetchApi = () => {
-        fetch(
-            'https://655d51109f1e1093c5993290.mockapi.io/Test'
-        ).then((response) => response.json())
-            .then((json) => {
-                setData(json);
-            });
-    }
-    console.log("data" + data);
-
+  
     const fnAddJob = () => {
         addJob(txtJob);
         setJob('');
@@ -63,7 +51,7 @@ const Screen1 = ({ todos, addJob, deleteJob, editJob }) => {
             <Pressable onPress={()=>{
                 editJob(1,'da update')
             }}>
-                <Text>Update</Text>
+                
             </Pressable>
         </View>
     );
